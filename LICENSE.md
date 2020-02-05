@@ -1,5 +1,6 @@
 # The MIT License (MIT)
 
+Copyright © 2020 Ron Lau
 Copyright © 2017 Andres Suarez and Teddy Katz
 
 Permission is hereby granted, free of charge, to any person

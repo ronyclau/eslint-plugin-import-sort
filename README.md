@@ -1,6 +1,6 @@
-# eslint-plugin-prettier [![Build Status](https://travis-ci.org/prettier/eslint-plugin-prettier.svg?branch=master)](https://travis-ci.org/prettier/eslint-plugin-prettier)
+# eslint-plugin-import-sort
 
-Runs [Prettier](https://github.com/prettier/prettier) as an [ESLint](http://eslint.org) rule and reports differences as individual ESLint issues.
+Runs [import-sort](https://github.com/renke/import-sort) as an [ESLint](http://eslint.org) rule and reports differences as individual ESLint issues.
 
 ## Sample
 
@@ -94,47 +94,3 @@ You can then set Prettier's own options inside a `.prettierrc` file.
 ```
 
 For the list of every available exclusion rule set, please see the [readme of eslint-config-prettier](https://github.com/prettier/eslint-config-prettier/blob/master/README.md).
-
-## Options
-
-> Note: While it is possible to pass options to Prettier via your ESLint configuration file, it is not recommended because editor extensions such as `prettier-atom` and `prettier-vscode` **will** read [`.prettierrc`](https://prettier.io/docs/en/configuration.html), but **won't** read settings from ESLint, which can lead to an inconsistent experience.
-
-- The first option:
-
-  - An object representing [options](https://prettier.io/docs/en/options.html) that will be passed into prettier. Example:
-
-    ```json
-    "prettier/prettier": ["error", {"singleQuote": true, "parser": "flow"}]
-    ```
-
-    NB: This option will merge and override any config set with `.prettierrc` files
-
-- The second option:
-
-  - An object with the following options
-
-    - `usePrettierrc`: Enables loading of the Prettier configuration file, (default: `true`). May be useful if you are using multiple tools that conflict with each other, or do not wish to mix your ESLint settings with your Prettier configuration.
-
-      ```json
-      "prettier/prettier": ["error", {}, {
-        "usePrettierrc": false
-      }]
-      ```
-
-    - `fileInfoOptions`: Options that are passed to [prettier.getFileInfo](https://prettier.io/docs/en/api.html#prettiergetfileinfofilepath-options) to decide whether a file needs to be formatted. Can be used for example to opt-out from ignoring files located in `node_modules` directories.
-
-      ```json
-      "prettier/prettier": ["error", {}, {
-        "fileInfoOptions": {
-          "withNodeModules": true
-        }
-      }]
-      ```
-
-- The rule is autofixable -- if you run `eslint` with the `--fix` flag, your code will be formatted according to `prettier` style.
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/prettier/eslint-plugin-prettier/blob/master/CONTRIBUTING.md)

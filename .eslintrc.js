@@ -8,10 +8,10 @@ module.exports = {
     'plugin:eslint-plugin/recommended',
     'prettier'
   ],
-  env: { mocha: true },
   root: true,
   rules: {
-    'self/prettier': ['error'],
+    'self/import-sort': ['error'],
+    'prettier/prettier': ['error'],
     'eslint-plugin/report-message-format': ['error', '^[^a-z].*\\.$']
   }
 };

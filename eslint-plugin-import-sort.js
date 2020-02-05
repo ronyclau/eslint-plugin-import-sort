@@ -1,6 +1,7 @@
 /**
- * @fileoverview Runs `prettier` as an ESLint rule.
- * @author Andres Suarez
+ * @fileoverview Runs `import-sort` as an ESLint rule.
+ * @author Ron Lau
+ * @author Andres Suarez (eslint-plugin-prettier)
  */
 
 'use strict';
